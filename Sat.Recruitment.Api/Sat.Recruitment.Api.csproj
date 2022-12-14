@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DataAccess\**" />
+    <Compile Remove="Files\**" />
+    <Compile Remove="Model\**" />
+    <Content Remove="DataAccess\**" />
+    <Content Remove="Files\**" />
+    <Content Remove="Model\**" />
+    <EmbeddedResource Remove="DataAccess\**" />
+    <EmbeddedResource Remove="Files\**" />
+    <EmbeddedResource Remove="Model\**" />
+    <None Remove="DataAccess\**" />
+    <None Remove="Files\**" />
+    <None Remove="Model\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.4.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.12">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sat.Recruitment.Common\Sat.Recruitment.Common.csproj" />
+    <ProjectReference Include="..\Sat.Recruitment.Contracts\Sat.Recruitment.Contracts.csproj" />
+    <ProjectReference Include="..\Sat.Recruitment.DataAccess\Sat.Recruitment.DataAccess.csproj" />
+    <ProjectReference Include="..\Sat.Recruitment.Engine\Sat.Recruitment.Engine.csproj" />
+  </ItemGroup>
+
+
+</Project>
